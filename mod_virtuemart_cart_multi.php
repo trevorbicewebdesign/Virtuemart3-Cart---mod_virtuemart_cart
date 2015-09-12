@@ -16,7 +16,7 @@ VmConfig::loadJLang('mod_virtuemart_cart', true);
 VmConfig::loadJLang('com_virtuemart', true);
 vmJsApi::jQuery();
 //$doc = JFactory::getDocument();
-vmJsApi::addJScript("/modules/mod_virtuemart_cart/assets/js/update_cart.js",false,false);
+vmJsApi::addJScript("/modules/mod_virtuemart_cart_multi/assets/js/update_cart.js",false,false);
 //vmJsApi::addJScript('vm.CartModule.UpdateProduct',$jsVars);
 //This is strange we have the whole thing again in controllers/cart.php public function viewJS()
 if(!class_exists('VirtueMartCart')) require(VMPATH_SITE.DS.'helpers'.DS.'cart.php');
@@ -34,6 +34,6 @@ vmJsApi::cssSite();
 $moduleclass_sfx 	= $params->get('moduleclass_sfx', '');
 $show_price 		= (bool)$params->get( 'show_price', 1 ); // Display the Product Price?
 $show_product_list 	= (bool)$params->get( 'show_product_list', 1 ); // Display the Product Price?
-require(JModuleHelper::getLayoutPath('mod_virtuemart_cart'));
+require(JModuleHelper::getLayoutPath('mod_virtuemart_cart_multi'));
 echo vmJsApi::writeJS();
  ?>

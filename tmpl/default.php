@@ -6,10 +6,7 @@ defined('_JEXEC') or die('Restricted access');
 // ALL THE DISPLAY IS Done by Ajax using "hiddencontainer" ?>
 
 <!-- Virtuemart 2 Ajax Card -->
-<div class="vmCartModule <?php echo $params->get('moduleclass_sfx'); ?>" id="vmCartModule">
-
-<h4><em class="fa fa-shopping-cart"></em>My Cart:</h4>
-
+<div class="vmCartModule <?php echo $params->get('moduleclass_sfx'); ?>" id="vmCartModule<?php echo $params->get('moduleid_sfx'); ?>">
 <?php
 if ($show_product_list) {
 	?>
@@ -27,7 +24,7 @@ if ($show_product_list) {
 	</div>
 	<div class="vm_cart_products">
 		<div class="vmcontainer">
-		
+
 		<?php
 			foreach ($data->products as $product){
 				?><div class="product_row">
